@@ -17,6 +17,11 @@ import time
 from scipy import optimize, stats
 from collections import OrderedDict
 
+import wmt14enfr
+import iwslt14zhen
+import openmt15zhen
+import trans_enhi
+import stan
 import data_iterator
 
 import dateutil
@@ -44,7 +49,13 @@ sys.stdout = Unbuffered(sys.stdout)
 profile = False
 
 # datasets: 'name', 'load_data: returns iterator', 'prepare_data: some preprocessing'
-datasets = {'data_iterator': (data_iterator.load_data, data_iterator.prepare_data)}
+datasets = {'wmt14enfr': (wmt14enfr.load_data, wmt14enfr.prepare_data),
+            'iwslt14zhen': (iwslt14zhen.load_data, iwslt14zhen.prepare_data),
+            'openmt15zhen': (openmt15zhen.load_data, openmt15zhen.prepare_data),
+            'trans_enhi': (trans_enhi.load_data, trans_enhi.prepare_data),
+            'stan': (stan.load_data, stan.prepare_data),
+            'data_iterator': (data_iterator.load_data, data_iterator.prepare_data)
+            }
 
 def get_dataset(name):
     return datasets[name][0], datasets[name][1]
@@ -87,7 +98,7 @@ def init_tparams(params):
 
 # load parameters
 def load_params(path, params):
-    pp = numpy.load('{}.npz'.format(path))
+    pp = numpy.load(path)
     for kk, vv in params.iteritems():
         if kk not in pp:
             warnings.warn('%s is not in the archive'%kk)
@@ -103,7 +114,6 @@ layers = {'ff': ('param_init_fflayer', 'fflayer'),
           'lstm_cond': ('param_init_lstm_cond', 'lstm_cond_layer'),
           'gru': ('param_init_gru', 'gru_layer'),
           'gru_cond': ('param_init_gru_cond', 'gru_cond_layer'),
-          'gru_cond_noatt': ('param_init_gru_cond_noatt', 'gru_cond_layer_noatt'),
           'gru_cond_simple': ('param_init_gru_cond_simple', 'gru_cond_simple_layer'),
           'gru_hiero': ('param_init_gru_hiero', 'gru_hiero_layer'),
           'rnn': ('param_init_rnn', 'rnn_layer'),
@@ -115,16 +125,14 @@ def get_layer(name):
     fns = layers[name]
     return (eval(fns[0]), eval(fns[1]))
 
-
 # some utilities
 def ortho_weight(ndim):
     W = numpy.random.randn(ndim, ndim)
     u, s, v = numpy.linalg.svd(W)
     return u.astype('float32')
 
-
-def norm_weight(nin, nout=None, scale=0.01, ortho=True):
-    if nout is None:
+def norm_weight(nin,nout=None, scale=0.01, ortho=True):
+    if nout == None:
         nout = nin
     if nout == nin and ortho:
         W = ortho_weight(nin)
@@ -182,15 +190,14 @@ def concatenate(tensor_list, axis=0):
 
     return out
 
-
 # feedforward layer: affine transformation + point-wise nonlinearity
 def param_init_fflayer(options, params, prefix='ff', nin=None, nout=None, ortho=True):
-    if nin is None:
+    if nin == None:
         nin = options['dim_proj']
-    if nout is None:
+    if nout == None:
         nout = options['dim_proj']
-    params[_p(prefix, 'W')] = norm_weight(nin, nout, scale=0.01, ortho=ortho)
-    params[_p(prefix, 'b')] = numpy.zeros((nout,)).astype('float32')
+    params[_p(prefix,'W')] = norm_weight(nin, nout, scale=0.01, ortho=ortho)
+    params[_p(prefix,'b')] = numpy.zeros((nout,)).astype('float32')
 
     return params
 
@@ -571,7 +578,6 @@ def param_init_gru_nonlin(options, params, prefix='gru', nin=None, dim=None, hie
     
     return params
 
-
 def gru_layer(tparams, state_below, options, prefix='gru', mask=None, **kwargs):
     nsteps = state_below.shape[0]
     if state_below.ndim == 3:
@@ -579,19 +585,18 @@ def gru_layer(tparams, state_below, options, prefix='gru', mask=None, **kwargs):
     else:
         n_samples = 1
 
-    dim = tparams[_p(prefix, 'Ux')].shape[1]
+    dim = tparams[_p(prefix,'Ux')].shape[1]
 
-    if mask is None:
+    if mask == None:
         mask = tensor.alloc(1., state_below.shape[0], 1)
 
     def _slice(_x, n, dim):
         if _x.ndim == 3:
-            return _x[:, :, n * dim:(n + 1) * dim]
-        return _x[:, n * dim:(n + 1) * dim]
+            return _x[:, :, n*dim:(n+1)*dim]
+        return _x[:, n*dim:(n+1)*dim]
 
     state_below_ = tensor.dot(state_below, tparams[_p(prefix, 'W')]) + tparams[_p(prefix, 'b')]
     state_belowx = tensor.dot(state_below, tparams[_p(prefix, 'Wx')]) + tparams[_p(prefix, 'bx')]
-
     U = tparams[_p(prefix, 'U')]
     Ux = tparams[_p(prefix, 'Ux')]
 
@@ -609,7 +614,6 @@ def gru_layer(tparams, state_below, options, prefix='gru', mask=None, **kwargs):
         h = tensor.tanh(preactx)
 
         h = u * h_ + (1. - u) * h
-        # TODO: Ask why keep old h when is masked instead of new h. 
         h = m_[:,None] * h + (1. - m_)[:,None] * h_
 
         return h#, r, u, preact, preactx
@@ -651,7 +655,6 @@ def param_init_gru_cond_simple(options, params, prefix='gru_cond', nin=None, dim
     params[_p(prefix,'Wcx')] = Wcx
 
     return params
-
 
 def gru_cond_simple_layer(tparams, state_below, options, prefix='gru', 
                           mask=None, context=None, one_step=False, 
@@ -704,10 +707,10 @@ def gru_cond_simple_layer(tparams, state_below, options, prefix='gru',
         u = _slice(preact, 1, dim)
 
         preactx = tensor.dot(h_, Ux)
-        preactx += pctxx_
         preactx *= r
         preactx += xx_
-        
+        preactx += pctxx_
+
         h = tensor.tanh(preactx)
 
         h = u * h_ + (1. - u) * h
@@ -805,7 +808,7 @@ def gru_cond_layer(tparams, state_below, options, prefix='gru',
     # projected context 
     assert context.ndim == 3, 'Context must be 3-d: #annotation x #sample x dim'
     pctx_ = tensor.dot(context, tparams[_p(prefix,'Wc_att')]) + tparams[_p(prefix,'b_att')]
-
+        
     def _slice(_x, n, dim):
         if _x.ndim == 3:
             return _x[:, :, n*dim:(n+1)*dim]
@@ -822,29 +825,30 @@ def gru_cond_layer(tparams, state_below, options, prefix='gru',
         preact1 += x_
         preact1 = tensor.nnet.sigmoid(preact1)
 
-        r1 = _slice(preact1, 0, dim)    # (4)
-        u1 = _slice(preact1, 1, dim)    # (5)
+        r1 = _slice(preact1, 0, dim)
+        u1 = _slice(preact1, 1, dim)
 
         preactx1 = tensor.dot(h_, Ux)
         preactx1 *= r1
         preactx1 += xx_
-        h1 = tensor.tanh(preactx1)      # (3)
+
+        h1 = tensor.tanh(preactx1)
 
         h1 = u1 * h_ + (1. - u1) * h1
-        h1 = m_[:,None] * h1 + (1. - m_)[:,None] * h_   # (2)
+        h1 = m_[:,None] * h1 + (1. - m_)[:,None] * h_
         
-
+        # attention
         pstate_ = tensor.dot(h1, W_comb_att)
         pctx__ = pctx_ + pstate_[None,:,:] 
         #pctx__ += xc_
         pctx__ = tensor.tanh(pctx__)
         alpha = tensor.dot(pctx__, U_att)+c_tt
-        alpha = alpha.reshape([alpha.shape[0], alpha.shape[1]])     # (8)
+        alpha = alpha.reshape([alpha.shape[0], alpha.shape[1]])
         alpha = tensor.exp(alpha)
         if context_mask:
             alpha = alpha * context_mask
-        alpha = alpha / alpha.sum(0, keepdims=True)                 # (7)
-        ctx_ = (cc_ * alpha[:,:,None]).sum(0)                       # (6) current context
+        alpha = alpha / alpha.sum(0, keepdims=True)
+        ctx_ = (cc_ * alpha[:,:,None]).sum(0) # current context
 
         preact2 = tensor.dot(h1, U_nl)+b_nl
         preact2 += tensor.dot(ctx_, Wc)
@@ -1249,12 +1253,14 @@ def init_params(options):
     # Encoder
     params = get_layer(options['encoder'])[0](options, params, prefix='encoder',
                                               nin=options['dim_word'], dim=options['dim'])
-    ctxdim = options['dim'] * 2
-    params = get_layer(options['encoder'])[0](options, params, prefix='encoder_r',
-                                              nin=options['dim_word'], dim=options['dim'])
-    if options['hiero']:
-        params = get_layer(options['hiero'])[0](options, params, prefix='hiero',
-                                                nin=2 * options['dim'], dimctx=2 * options['dim'])
+    ctxdim = options['dim']
+    if not options['decoder'].endswith('simple'):
+        ctxdim = options['dim'] * 2
+        params = get_layer(options['encoder'])[0](options, params, prefix='encoder_r',
+                                                  nin=options['dim_word'], dim=options['dim'])
+        if options['hiero']:
+            params = get_layer(options['hiero'])[0](options, params, prefix='hiero',
+                                                    nin=2 * options['dim'], dimctx=2 * options['dim'])
     # init_state, init_cell
     params = get_layer('ff')[0](options, params, prefix='ff_state', nin=ctxdim, nout=options['dim'])
     if options['encoder'] == 'lstm':
@@ -1295,49 +1301,44 @@ def build_model(tparams, options):
     src_lengths = x_mask.sum(axis=0)
 
     emb = tparams['Wemb'][x.flatten()].reshape([n_timesteps, n_samples, options['dim_word']])
-    
-    # h_new from GRU layer
     proj = get_layer(options['encoder'])[1](tparams, emb, options,
                                             prefix='encoder',
                                             mask=x_mask)
 
-
-
-
-    embr = tparams['Wemb'][xr.flatten()].reshape([n_timesteps, n_samples, options['dim_word']])
-    projr = get_layer(options['encoder'])[1](tparams, embr, options,
-                                             prefix='encoder_r',
-                                             mask=xr_mask)
-    ctx = concatenate([proj[0], projr[0][::-1]], axis=proj[0].ndim - 1)
-    if options['hiero']:
-        # ctx = tensor.dot(ctx, tparams['W_hiero'])
-        rval = get_layer(options['hiero'])[1](tparams, ctx, options,
-                                              prefix='hiero',
-                                              context_mask=x_mask)
-        ctx = rval[0]
-        opt_ret['hiero_alphas'] = rval[2]
-        opt_ret['hiero_betas'] = rval[3]
-
-    ctx_mean = concatenate([proj[0][-1], projr[0][-1]], axis=proj[0].ndim - 2)
-
     if options['decoder'].endswith('simple'):
-        # Use the last h for each direction
-        ctx = ctx_mean
+        ctx = proj[0][-1]
+        ctx_mean = ctx
+    else:
+        embr = tparams['Wemb'][xr.flatten()].reshape([n_timesteps, n_samples, options['dim_word']])
+        projr = get_layer(options['encoder'])[1](tparams, embr, options,
+                                                 prefix='encoder_r',
+                                                 mask=xr_mask)
+        ctx = concatenate([proj[0], projr[0][::-1]], axis=proj[0].ndim - 1)
+        if options['hiero']:
+            # ctx = tensor.dot(ctx, tparams['W_hiero'])
+            rval = get_layer(options['hiero'])[1](tparams, ctx, options,
+                                                  prefix='hiero',
+                                                  context_mask=x_mask)
+            ctx = rval[0]
+            opt_ret['hiero_alphas'] = rval[2]
+            opt_ret['hiero_betas'] = rval[3]
 
-    # Map from ctx_dim to dim (2h to h)
+        # initial state/cell
+        # ctx_mean = ctx.mean(0)
+        # ctx_mean = (ctx * x_mask[:,:,None]).sum(0) / x_mask.sum(0)[:,None]
+        ctx_mean = concatenate([proj[0][-1], projr[0][-1]], axis=proj[0].ndim - 2)
+
     init_state = get_layer('ff')[1](tparams, ctx_mean, options, prefix='ff_state', activ='tanh')
     init_memory = None
-    
     if options['encoder'] == 'lstm':
         init_memory = get_layer('ff')[1](tparams, ctx_mean, options, prefix='ff_memory', activ='tanh')
-    
-
     # word embedding (target)
     emb = tparams['Wemb_dec'][y.flatten()].reshape([n_timesteps_trg, n_samples, options['dim_word']])
     emb_shifted = tensor.zeros_like(emb)
     emb_shifted = tensor.set_subtensor(emb_shifted[1:], emb[:-1])
     emb = emb_shifted
 
+    # decoder
     proj = get_layer(options['decoder'])[1](tparams, emb, options,
                                             prefix='decoder',
                                             mask=y_mask, context=ctx,
@@ -1347,7 +1348,7 @@ def build_model(tparams, options):
                                             init_memory=init_memory)
     proj_h = proj[0]
     if options['decoder'].endswith('simple'):
-        ctxs = ctx[None, :, :]
+        ctxs = ctx[None,:,:]
     else:
         if options['decoder'].startswith('lstm'):
             ctxs = proj[2]
@@ -1388,20 +1389,18 @@ def build_sampler(tparams, options, trng):
 
     # encoder
     proj = get_layer(options['encoder'])[1](tparams, emb, options, prefix='encoder')
-    projr = get_layer(options['encoder'])[1](tparams, embr, options, prefix='encoder_r')
-
-    ctx = concatenate([proj[0],projr[0][::-1]], axis=proj[0].ndim-1)
-    
-    if options['hiero']:
-        rval = get_layer(options['hiero'])[1](tparams, ctx, options, prefix='hiero')
-        ctx = rval[0]
-    # initial state/cell
-    # ctx_mean = ctx.mean(0)
-    ctx_mean = concatenate([proj[0][-1],projr[0][-1]], axis=proj[0].ndim-2)
-    
     if options['decoder'].endswith('simple'):
-        ctx = ctx_mean
-
+        ctx = proj[0][-1]
+        ctx_mean = ctx
+    else:
+        projr = get_layer(options['encoder'])[1](tparams, embr, options, prefix='encoder_r')
+        ctx = concatenate([proj[0],projr[0][::-1]], axis=proj[0].ndim-1)
+        if options['hiero']:
+            rval = get_layer(options['hiero'])[1](tparams, ctx, options, prefix='hiero')
+            ctx = rval[0]
+        # initial state/cell
+        # ctx_mean = ctx.mean(0)
+        ctx_mean = concatenate([proj[0][-1],projr[0][-1]], axis=proj[0].ndim-2)
     init_state = get_layer('ff')[1](tparams, ctx_mean, options, prefix='ff_state', activ='tanh')
     if options['encoder'] == 'lstm':
         init_memory = get_layer('ff')[1](tparams, ctx_mean, options, prefix='ff_memory', activ='tanh')
@@ -1416,20 +1415,20 @@ def build_sampler(tparams, options, trng):
 
     # x: 1 x 1
     y = tensor.vector('y_sampler', dtype='int64')
-
+    
     init_state = tensor.matrix('init_state', dtype='float32')
     if options['decoder'].startswith('lstm'):
         init_memory = tensor.matrix('init_memory', dtype='float32')
     else:
         init_memory = None
-
+    
     n_timesteps = ctx.shape[0]
         
     # if it's the first word, emb should be all zero
     emb = tensor.switch(y[:,None] < 0, tensor.alloc(0., 1, tparams['Wemb_dec'].shape[1]), 
                         tparams['Wemb_dec'][y])
 
-
+    
 
     proj = get_layer(options['decoder'])[1](tparams, emb, options, 
                                             prefix='decoder', 
@@ -1464,12 +1463,11 @@ def build_sampler(tparams, options, trng):
     if options['decoder'].startswith('lstm'):
         inps += [init_memory]
         outs += [next_memory]
-
+    
     f_next = theano.function(inps, outs, name='f_next', profile=profile)
     print 'Done'
 
     return f_init, f_next
-
 
 # generate sample
 def gen_sample(tparams, f_init, f_next, x, options, trng=None, k=1, maxlen=30, 
@@ -1490,23 +1488,21 @@ def gen_sample(tparams, f_init, f_next, x, options, trng=None, k=1, maxlen=30,
     hyp_states = []
     if options['decoder'].startswith('lstm'):
         hyp_memories = []
-
+    
     ret = f_init(x)
     next_state = ret.pop(0)
     ctx0 = ret.pop(0)
     if options['decoder'].startswith('lstm'):
         next_memory = ret.pop(0)
-
+    
     next_w = -1 * numpy.ones((1,)).astype('int64')
 
     for ii in xrange(maxlen):
         if options['decoder'].endswith('simple'):
             ctx = numpy.tile(ctx0, [live_k, 1])
         else:
-            ctx0_reshaped = ctx0.reshape((ctx0.shape[0],ctx0.shape[2]))
-
-            ctx = numpy.tile(ctx0_reshaped, [live_k, 1, 1]).transpose((1,0,2))
-        
+            ctx = numpy.tile(ctx0.reshape((ctx0.shape[0],ctx0.shape[2])), 
+                                          [live_k, 1, 1]).transpose((1,0,2))
         inps = [next_w, ctx, next_state]
         if options['decoder'].startswith('lstm'):
             inps += [next_memory]
@@ -1531,7 +1527,7 @@ def gen_sample(tparams, f_init, f_next, x, options, trng=None, k=1, maxlen=30,
             cand_scores = hyp_scores[:,None] - numpy.log(next_p)
             cand_flat = cand_scores.flatten()
             ranks_flat = cand_flat.argsort()[:(k-dead_k)]
-
+            
             voc_size = next_p.shape[1]
             trans_indices = ranks_flat / voc_size
             word_indices = ranks_flat % voc_size
@@ -1596,12 +1592,14 @@ def gen_sample(tparams, f_init, f_next, x, options, trng=None, k=1, maxlen=30,
 
 def pred_probs(f_log_probs, prepare_data, options, iterator, verbose=True):
     probs = []
+
     n_done = 0
 
+    # iterator.start()
     for x, y in iterator:
         n_done += len(x)
 
-        x, x_mask, y, y_mask = prepare_data(x, y, maxlen=(2 * options['maxlen']), n_words_src=options['n_words_src'], n_words=options['n_words'])
+        x, x_mask, y, y_mask = prepare_data(x, y, maxlen=100, n_words_src=options['n_words_src'], n_words=options['n_words'])
         
         if x == None:
             continue
