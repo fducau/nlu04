@@ -1957,19 +1957,14 @@ def train(dim_word=256,  # word vector dimensionality
                 train_err = 0
                 valid_err = 0
                 test_err = 0
-                # for _, tindex in kf:
-                #     x, mask = prepare_data(train[0][train_index])
-                #     train_err += (f_pred(x, mask) == train[1][tindex]).sum()
-                # train_err = 1. - numpy.float32(train_err) / train[0].shape[0]
 
-                # train_err = pred_error(f_pred, prepare_data, train, kf)
                 if valid is not None:
                     log_probs = pred_probs(f_log_probs, prepare_data, model_options, valid)
-                    valid_error = log_probs.mean()
-                    valid_perp = perplexity_from_logprobs(log_probs)
+                    valid_err = numpy.mean(log_probs)
+                    valid_perp = numpy.exp(valid_err)
 
 
-                history_errs.append([valid_err, test_err])
+                history_errs.append([cost, valid_err, valid_perp])
 
                 if uidx == 0 or valid_err <= numpy.array(history_errs)[:, 0].min():
                     best_p = unzip(tparams)
@@ -1980,7 +1975,7 @@ def train(dim_word=256,  # word vector dimensionality
                         estop = True
                         break
 
-                print('Train: {} Val: {} ValPerp: {}'.format(train_err, valid_err, valid_perp))
+                print('Train: {} Val: {} ValPerp: {}'.format(cost, valid_err, valid_perp))
                 print('Seen {} samples'.format(n_samples))
 
         # print 'Epoch ', eidx, 'Update ', uidx, 'Train ', train_err, 'Valid ', valid_err, 'Test ', test_err

@@ -19,7 +19,7 @@ import datetime
 # https://github.com/ddahlmeier/neural_lm/blob/master/lbl.py
 
 def pred_perplexity(f_log_probs, prepare_data, options, iterator, verbose=False):
-    log_probs = []
+    log_p = []
 
     n_done = 0
 
@@ -38,11 +38,11 @@ def pred_perplexity(f_log_probs, prepare_data, options, iterator, verbose=False)
         if verbose:
             print >>sys.stderr, '%d samples computed'%(n_done)
 
-    perplexity_exponent = - np.mean(log_probs)
-    return np.power(2.0, perplexity_exponent)
+    perplexity_exponent = np.mean(log_probs)
+    return np.exp(perplexity_exponent)
 
 
-def perplexity_from_logprobs(log_probs):
-	return np.power(2.0, - np.mean(log_probs))
+def perplexity_from_logprobs(minus_log_probs):
+	return np.exp(np.mean(minus_log_probs))
 
 
