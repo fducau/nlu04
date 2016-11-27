@@ -23,6 +23,7 @@ import dateutil
 import dateutil.tz
 import datetime
 
+from metrics import *
 
 class Unbuffered:
     def __init__(self, stream):
@@ -1963,7 +1964,9 @@ def train(dim_word=256,  # word vector dimensionality
 
                 # train_err = pred_error(f_pred, prepare_data, train, kf)
                 if valid is not None:
-                    valid_err = pred_probs(f_log_probs, prepare_data, model_options, valid).mean()
+                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, valid)
+                    valid_error = log_probs.mean()
+                    valid_perp = perplexity_from_logprobs(log_probs)
 
 
                 history_errs.append([valid_err, test_err])
@@ -1977,7 +1980,7 @@ def train(dim_word=256,  # word vector dimensionality
                         estop = True
                         break
 
-                print('Train: {} Val: {} Test: {}'.format(train_err, valid_err, test_err))
+                print('Train: {} Val: {} ValPerp: {}'.format(train_err, valid_err, valid_perp))
                 print('Seen {} samples'.format(n_samples))
 
         # print 'Epoch ', eidx, 'Update ', uidx, 'Train ', train_err, 'Valid ', valid_err, 'Test ', test_err
