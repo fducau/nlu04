@@ -17,11 +17,6 @@ import time
 from scipy import optimize, stats
 from collections import OrderedDict
 
-import wmt14enfr
-import iwslt14zhen
-import openmt15zhen
-import trans_enhi
-import stan
 import data_iterator
 
 import dateutil
@@ -49,13 +44,7 @@ sys.stdout = Unbuffered(sys.stdout)
 profile = False
 
 # datasets: 'name', 'load_data: returns iterator', 'prepare_data: some preprocessing'
-datasets = {'wmt14enfr': (wmt14enfr.load_data, wmt14enfr.prepare_data),
-            'iwslt14zhen': (iwslt14zhen.load_data, iwslt14zhen.prepare_data),
-            'openmt15zhen': (openmt15zhen.load_data, openmt15zhen.prepare_data),
-            'trans_enhi': (trans_enhi.load_data, trans_enhi.prepare_data),
-            'stan': (stan.load_data, stan.prepare_data),
-            'data_iterator': (data_iterator.load_data, data_iterator.prepare_data)
-            }
+datasets = {'data_iterator': (data_iterator.load_data, data_iterator.prepare_data)}
 
 def get_dataset(name):
     return datasets[name][0], datasets[name][1]
