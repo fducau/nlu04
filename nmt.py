@@ -88,7 +88,7 @@ def init_tparams(params):
 
 # load parameters
 def load_params(path, params):
-    pp = numpy.load(path)
+    pp = numpy.load(path + 'npz')
     for kk, vv in params.iteritems():
         if kk not in pp:
             warnings.warn('%s is not in the archive'%kk)
