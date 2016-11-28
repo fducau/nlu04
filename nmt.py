@@ -1964,8 +1964,11 @@ def train(dim_word=256,  # word vector dimensionality
                     valid_err = numpy.mean(log_probs)
                     valid_perp = numpy.exp(valid_err)
 
+                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, train)
+                    train_err = numpy.mean(log_probs)
+                    train_perp = numpy.exp(train_err)  
 
-                history_errs.append([valid_err, cost, valid_perp])
+                history_errs.append([valid_err, train_err, valid_perp, train_perp])
 
                 if uidx == 0 or valid_err <= numpy.array(history_errs)[:, 0].min():
                     best_p = unzip(tparams)
@@ -1976,7 +1979,7 @@ def train(dim_word=256,  # word vector dimensionality
                         estop = True
                         break
 
-                print('Train: {} Val: {} ValPerp: {}'.format(cost, valid_err, valid_perp))
+                print('Train: {} Val: {} TrainPerp: {} ValPerp: {}'.format(cost, valid_err, train_perp, valid_perp))
                 print('Seen {} samples'.format(n_samples))
 
         # print 'Epoch ', eidx, 'Update ', uidx, 'Train ', train_err, 'Valid ', valid_err, 'Test ', test_err
