@@ -16,10 +16,10 @@ from nmt import train
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dim_word', default=128,
+parser.add_argument('--dim_word', default=512,
                     help='Word dimension',
                     type=int)
-parser.add_argument('--dim', default=512,
+parser.add_argument('--dim', default=1024,
                     help='Number of LSTM units',
                     type=int)
 parser.add_argument('--encoder', default='gru',
@@ -35,7 +35,7 @@ parser.add_argument('--maxEpochs', default=100,
 parser.add_argument('--dispFreq', default=250,
                     help='Training display frequency',
                     type=int)
-parser.add_argument('--nWords', default=20000,
+parser.add_argument('--nWords', default=40000,
                     help='Length of source vocabulary',
                     type=int)
 parser.add_argument('--maxLen', default=50,
