@@ -1964,7 +1964,7 @@ def train(dim_word=256,  # word vector dimensionality
                     valid_perp = numpy.exp(valid_err)
 
 
-                history_errs.append([cost, valid_err, valid_perp])
+                history_errs.append([valid_err, cost, valid_perp])
 
                 if uidx == 0 or valid_err <= numpy.array(history_errs)[:, 0].min():
                     best_p = unzip(tparams)
@@ -2011,7 +2011,13 @@ def train(dim_word=256,  # word vector dimensionality
                 **params)
 
     print('Training completed!')
-    return train_err, valid_err, test_err
+    print('Computing BLEU in test set')
+    BLEU_score = compute_BLEU(test, options, tparams, f_init, f_next, trng, stochastic)
+
+    return {'train_error': train_err,
+            'val_error':valid_err,
+            'test_error':test_err,
+            'BLEU_score':BLEU_score}
 
 
 if __name__ == '__main__':
