@@ -16,10 +16,10 @@ from nmt import train
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dim_word', default=512,
+parser.add_argument('--dim_word', default=128,
                     help='Word dimension',
                     type=int)
-parser.add_argument('--dim', default=1024,
+parser.add_argument('--dim', default=256,
                     help='Number of LSTM units',
                     type=int)
 parser.add_argument('--encoder', default='gru',
@@ -54,7 +54,7 @@ parser.add_argument('--saveModelTo', default='ckt',
 parser.add_argument('--validFreq', default=50,
                     help='Number of batches in between validation steps',
                     type=int)
-parser.add_argument('--saveFreq', default=50,
+parser.add_argument('--saveFreq', default=100,
                     help='Number of batches in between model savings.',
                     type=int)
 parser.add_argument('--sampleFreq', default=150,

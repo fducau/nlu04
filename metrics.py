@@ -16,7 +16,7 @@ import dateutil
 import dateutil.tz
 import datetime
 
-#from nltk.translate import bleu
+from nltk.translate.bleu_score import corpus_bleu
 # https://github.com/ddahlmeier/neural_lm/blob/master/lbl.py
 
 def pred_perplexity(f_log_probs, prepare_data, options, iterator, verbose=False):
@@ -47,24 +47,24 @@ def perplexity_from_logprobs(minus_log_probs):
 	return np.exp(np.mean(minus_log_probs))
 
 
-# def compute_BLEU(iterator, options, tparams, f_init, f_next, trng, stochastic=False):
-# 	bleu_scores = []
-# 	for x, y in iterator:
-# 		x, x_mask, y, y_mask = prepare_data(x, y, maxlen=100,
-# 											n_words_src=options['n_words_src'],
-# 											n_words=options['n_words'])
-# 
-# 
-# 		for utterance_idx in xrange(x.shape[1]):
-# 			hypothesis, score = gen_sample(tparams, f_init, f_next, x[:, utterance_idx][:, None],
-#                            			   model_options, trng=trng, k=1, maxlen=30,
-#                                        stochastic=stochastic, argmax=True)
-# 
-# 			original = y[:, utterance_idx]
-# 			hypothesis = ' '.join([str(i) for i in sample])
-# 			original = ' '.join([str(i) for i in original])
-# 
-# 			bleu_scores.append(bleu(original, hypothesis))
-# 
-# 	bleu_scores = np.array(bleu_scores)
-# 	return bleu_scores.mean()
+def compute_BLEU(iterator, options, tparams, f_init, f_next, trng, stochastic=False):
+	bleu_scores = []
+	for x, y in iterator:
+		x, x_mask, y, y_mask = prepare_data(x, y, maxlen=100,
+											n_words_src=options['n_words_src'],
+											n_words=options['n_words'])
+
+
+		for utterance_idx in xrange(x.shape[1]):
+			hypothesis, score = gen_sample(tparams, f_init, f_next, x[:, utterance_idx][:, None],
+                           			   model_options, trng=trng, k=1, maxlen=30,
+                                       stochastic=stochastic, argmax=True)
+
+			original = y[:, utterance_idx]
+			hypothesis = ' '.join([str(i) for i in sample])
+			original = ' '.join([str(i) for i in original])
+
+			bleu_scores.append(bleu(original, hypothesis))
+
+	bleu_scores = np.array(bleu_scores)
+	return bleu_scores.mean()
