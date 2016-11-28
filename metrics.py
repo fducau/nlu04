@@ -16,7 +16,7 @@ import dateutil
 import dateutil.tz
 import datetime
 
-from nltk.translate.bleu_score import corpus_bleu
+#from nltk.translate.bleu_score import corpus_bleu
 # https://github.com/ddahlmeier/neural_lm/blob/master/lbl.py
 
 def pred_perplexity(f_log_probs, prepare_data, options, iterator, verbose=False):

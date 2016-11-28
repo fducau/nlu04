@@ -1980,7 +1980,7 @@ def train(dim_word=256,  # word vector dimensionality
                         break
 
                 print('Train: {} Val: {} TrainPerp: {} ValPerp: {}'.format(cost, valid_err, train_perp, valid_perp))
-                print('Seen {} samples'.format(n_samples))
+                print('Seen {} samples'.format(n_samples))-
 
         # print 'Epoch ', eidx, 'Update ', uidx, 'Train ', train_err, 'Valid ', valid_err, 'Test ', test_err
 
