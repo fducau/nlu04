@@ -2012,7 +2012,7 @@ def train(dim_word=256,  # word vector dimensionality
 
     print('Training completed!')
     print('Computing BLEU in test set')
-    BLEU_score = compute_BLEU(test, options, tparams, f_init, f_next, trng, stochastic)
+    #BLEU_score = compute_BLEU(test, options, tparams, f_init, f_next, trng, stochastic)
 
     return {'train_error': train_err,
             'val_error':valid_err,
