@@ -49,7 +49,7 @@ parser.add_argument('--batchSize', default=100,
 parser.add_argument('--validBatchSize', default=100,
                     help='Generate some samples in between sampleFreqs updates.',
                     type=int)
-parser.add_argument('--saveModelTo', default='./ckt/',
+parser.add_argument('--saveModelTo', default='ckt',
                     help='Folder to save the model to.')
 parser.add_argument('--validFreq', default=50,
                     help='Number of batches in between validation steps',
@@ -134,6 +134,6 @@ def main():
                     reload_=reload_,
                     correlation_coeff=0.1,
                     clip_c=1.)
-    
+
 if __name__ == '__main__':
     main()
