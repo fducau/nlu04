@@ -1596,7 +1596,7 @@ def pred_probs(f_log_probs, prepare_data, options, iterator, verbose=True):
 
         pprobs = f_log_probs(x,x_mask,y,y_mask)
         sentence_lengths = y_mask.sum(0)
-        for pp, sentence_length in zip(pprobs, sentence_length):
+        for pp, sentence_length in zip(pprobs, sentence_lengths):
             probs.append(pp / (1.0 * sentence_length))
 
         if verbose:
