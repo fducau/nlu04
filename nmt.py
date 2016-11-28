@@ -1862,7 +1862,7 @@ def train(dim_word=256,  # word vector dimensionality
     if reload_ and os.path.exists(reload_):
         history_errs = list(numpy.load(reload_)['history_errs'])
     best_p = None
-    bad_count = 0
+    bad_counter = 0
 
     if validFreq == -1:
         validFreq = len(train[0]) / batch_size
