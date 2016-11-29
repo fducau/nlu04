@@ -1751,6 +1751,7 @@ def train(dim_word=256,  # word vector dimensionality
           correlation_coeff=0.1,
           clip_c=1.,
           model_size='Large'):
+    
 
     # Model options
     model_options = locals().copy()
@@ -1781,8 +1782,10 @@ def train(dim_word=256,  # word vector dimensionality
         train, valid, test = load_data(train_batch_size=batch_size,
                                        val_batch_size=valid_batch_size,
                                        test_batch_size=valid_batch_size)
-
-
+        
+        train_perp, valid_perp, test_perp = load_data(train_batch_size=batch_size,
+                                       val_batch_size=valid_batch_size,
+                                       test_batch_size=valid_batch_size)
     print 'Building model...'
     params = init_params(model_options)
     # reload parameters
@@ -1907,7 +1910,6 @@ def train(dim_word=256,  # word vector dimensionality
                 return 1., 1., 1.
 
             if numpy.mod(uidx, dispFreq) == 0:
-                # print 'Epoch ', eidx, 'Update ', uidx, 'Cost ', cost, 'UD ', ud
                 now = datetime.datetime.now(dateutil.tz.tzlocal())
                 timestamp = now.strftime('%H_%M_%S')
                 print('[{}] Epoch: {}, Update: {}, Cost: {}, UD {}'.format(timestamp, eidx, uidx, cost, ud))
@@ -1960,11 +1962,11 @@ def train(dim_word=256,  # word vector dimensionality
                 test_err = 0
 
                 if valid is not None:
-                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, valid)
+                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, valid_perp)
                     valid_err = numpy.mean(log_probs)
                     valid_perp = numpy.exp(valid_err)
 
-                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, train)
+                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, train_perp)
                     train_err = numpy.mean(log_probs)
                     train_perp = numpy.exp(train_err)  
 
@@ -1981,9 +1983,6 @@ def train(dim_word=256,  # word vector dimensionality
 
                 print('Train: {} Val: {} TrainPerp: {} ValPerp: {}'.format(cost, valid_err, train_perp, valid_perp))
                 print('Seen {} samples'.format(n_samples))
-        # print 'Epoch ', eidx, 'Update ', uidx, 'Train ', train_err, 'Valid ', valid_err, 'Test ', test_err
-
-        # print 'Seen %d samples'%n_samples
 
         if estop:
             print('Early Stop!')
