@@ -2,7 +2,7 @@
 # @Author: fducau
 # @Date:   2016-11-23 13:50:50
 # @Last Modified by:   fducau
-# @Last Modified time: 2016-11-29 03:16:04
+# @Last Modified time: 2016-11-29 03:48:01
 import theano
 import theano.tensor as tensor
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
@@ -126,5 +126,5 @@ def evaluate(dim_word=128,
     plot_perplexity(model_options['history_errs'])
 
 if __name__ == '__main__':
-    evaluate(model='./noatt001_turn_1')
+    evaluate(model='./noatt001_turn_0')
 

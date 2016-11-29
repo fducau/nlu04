@@ -1,0 +1,88 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{cho_encdec}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Cho}{C.}%
+     {Kyunghyun}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Merrienboer}{M.}%
+     {Bart}{B.}%
+     {van}{v.}%
+     {}{}}%
+    {{}%
+     {G{\"{u}}l{\c{c}}ehre}{G.}%
+     {{\c{C}}aglar}{{\c{C}}.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bougares}{B.}%
+     {Fethi}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schwenk}{S.}%
+     {Holger}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CK+1}
+  \strng{fullhash}{CKMBvGCBFSHBY1}
+  \field{sortinit}{C}
+  \field{title}{Learning Phrase Representations using {RNN} Encoder-Decoder for
+  Statistical Machine Translation}
+  \verb{url}
+  \verb http://arxiv.org/abs/1406.1078
+  \endverb
+  \field{volume}{abs/1406.1078}
+  \field{journaltitle}{CoRR}
+  \field{year}{2014}
+\endentry
+
+\entry{adadelta}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Zeiler}{Z.}%
+     {Matthew~D.}{M.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ZMD1}
+  \strng{fullhash}{ZMD1}
+  \field{sortinit}{Z}
+  \field{title}{{ADADELTA:} An Adaptive Learning Rate Method}
+  \verb{url}
+  \verb http://arxiv.org/abs/1212.5701
+  \endverb
+  \field{volume}{abs/1212.5701}
+  \field{journaltitle}{CoRR}
+  \field{year}{2012}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

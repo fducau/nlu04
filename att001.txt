@@ -1,0 +1,1475 @@
+Loading data...
+... initializing data iterators
+./data/train.ja_idx
+./data/train.en_idx
+./data/dev.ja_idx
+./data/dev.en_idx
+./data/test.ja_idx
+./data/test.en_idx
+... initializing data iterators
+./data/train.ja_idx
+./data/train.en_idx
+./data/dev.ja_idx
+./data/dev.en_idx
+./data/test.ja_idx
+./data/test.en_idx
+Building model...
+Buliding sampler...
+Building f_init... Done
+Building f_next.. Done
+Building f_log_probs... Done
+Building f_cost... Done
+Computing gradient... Done
+Building f_grad... Done
+Building optimizers... Done
+Optimization
+Train: 66.3512115479 Val: 6.48900296904 TrainPerp: 642.351374987 ValPerp: 657.867122235
+Seen 5000 samples
+Saving...
+Done
+Train: 63.9102745056 Val: 6.26995508317 TrainPerp: 505.990901043 ValPerp: 528.453640883
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Train: 62.7224960327 Val: 6.18170293014 TrainPerp: 459.813433652 ValPerp: 483.815158644
+Seen 5000 samples
+Saving...
+Done
+Train: 62.3609695435 Val: 6.1383701909 TrainPerp: 437.40942437 ValPerp: 463.297868118
+Seen 10000 samples
+[22_30_49] Epoch: 2, Update: 250, Cost: 61.8801383972, UD 1.18862605095
+Train: 61.8801383972 Val: 6.10413500692 TrainPerp: 421.264148859 ValPerp: 447.705212007
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Train: 61.6745300293 Val: 6.08790320952 TrainPerp: 412.506426121 ValPerp: 440.496812617
+Seen 10000 samples
+Train: 61.4918060303 Val: 6.06760592249 TrainPerp: 403.382554855 ValPerp: 431.646049476
+Seen 5000 samples
+Saving...
+Done
+Train: 61.2623329163 Val: 6.06103085218 TrainPerp: 399.026161394 ValPerp: 428.817256297
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Train: 61.2429504395 Val: 6.04697351407 TrainPerp: 392.817092626 ValPerp: 422.831398325
+Seen 5000 samples
+[22_37_40] Epoch: 4, Update: 500, Cost: 60.9890594482, UD 1.23422384262
+Saving...
+Done
+Train: 60.9890594482 Val: 6.04471404874 TrainPerp: 390.341794968 ValPerp: 421.877103943
+Seen 10000 samples
+Train: 61.0520553589 Val: 6.0340371932 TrainPerp: 385.730394138 ValPerp: 417.39674369
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Train: 60.8003768921 Val: 6.03043011993 TrainPerp: 383.026918672 ValPerp: 415.89387516
+Seen 10000 samples
+Train: 60.519493103 Val: 5.98222226204 TrainPerp: 365.644166829 ValPerp: 396.320117429
+Seen 5000 samples
+Saving...
+Done
+Train: 59.4865684509 Val: 5.90664414269 TrainPerp: 339.01341825 ValPerp: 367.470903987
+Seen 10000 samples
+[22_44_32] Epoch: 7, Update: 750, Cost: 59.4339942932, UD 1.19322800636
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i
+Train: 59.4339942932 Val: 5.82313202245 TrainPerp: 312.695360711 ValPerp: 338.02911217
+Seen 5000 samples
+Saving...
+Done
+Train: 57.2079620361 Val: 5.96582643807 TrainPerp: 351.393459305 ValPerp: 389.875102593
+Seen 10000 samples
+Train: 57.7307319641 Val: 5.88433359088 TrainPerp: 324.053858135 ValPerp: 359.363205266
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i is is the the the the the the the the the the the the
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i is is the the the the the the the the the the the the
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i is is the the the the the the the the the the the the
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i is is the the the the the the the the the the the the
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i is is the the the the the the the the the the the the
+Train: 56.576965332 Val: 5.91869812351 TrainPerp: 333.280256456 ValPerp: 371.927195283
+Seen 10000 samples
+Train: 57.2516593933 Val: 5.83061757481 TrainPerp: 305.794110275 ValPerp: 340.568940937
+Seen 5000 samples
+[22_51_25] Epoch: 9, Update: 1000, Cost: 55.8076629639, UD 1.22888302803
+Saving...
+Done
+Train: 55.8076629639 Val: 5.89062487152 TrainPerp: 322.749548976 ValPerp: 361.631186816
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i is is to to to to to to . . . . . . . . . . . . . . . . . . . . .
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i is is to to to to to to . . . . . . . . . . . . . . . . . . . . .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i is is to to to to to to . . . . . . . . . . . . . . . . . . . . .
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i is is to to to to to to . . . . . . . . . . . . . . . . . . . . .
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i is is to to to to to to . . . . . . . . . . . . . . . . . . . . .
+Train: 56.7110061646 Val: 5.80425459535 TrainPerp: 296.873726265 ValPerp: 331.707844597
+Seen 5000 samples
+Saving...
+Done
+Train: 55.3407516479 Val: 5.72594109461 TrainPerp: 275.903991322 ValPerp: 306.721783677
+Seen 10000 samples
+Train: 55.6015815735 Val: 5.68748424587 TrainPerp: 265.329193194 ValPerp: 295.150160615
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i is a .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i is a .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i is a .
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i is a .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i is a .
+Train: 54.7920036316 Val: 5.46728251229 TrainPerp: 213.87121078 ValPerp: 236.815773602
+Seen 10000 samples
+[22_58_15] Epoch: 12, Update: 1250, Cost: 55.0665969849, UD 1.24743103981
+Train: 55.0665969849 Val: 5.4369184024 TrainPerp: 207.934602892 ValPerp: 229.733146427
+Seen 5000 samples
+Saving...
+Done
+Train: 54.5223999023 Val: 5.41874292468 TrainPerp: 203.678033185 ValPerp: 225.595353828
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i is to to to to to to .
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i is to to to to to to .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i is to to to to to to .
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i is to to to to to to .
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i is to to to to to to .
+Train: 54.8910484314 Val: 5.41267277337 TrainPerp: 202.472885046 ValPerp: 224.230103725
+Seen 5000 samples
+Saving...
+Done
+Train: 54.1623001099 Val: 5.40627285494 TrainPerp: 200.501274949 ValPerp: 222.799631686
+Seen 10000 samples
+Train: 54.7381973267 Val: 5.39850863029 TrainPerp: 198.76768813 ValPerp: 221.076463483
+Seen 5000 samples
+[23_05_07] Epoch: 14, Update: 1500, Cost: 54.0113792419, UD 1.16705989838
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i is a to to to to to to .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i is a to to to to to to .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i is a to to to to to to .
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i is a to to to to to to .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i is a to to to to to to .
+Train: 54.0113792419 Val: 5.3896375917 TrainPerp: 196.278483755 ValPerp: 219.123958821
+Seen 10000 samples
+Train: 54.5912055969 Val: 5.38644192033 TrainPerp: 195.617688955 ValPerp: 218.424828349
+Seen 5000 samples
+Saving...
+Done
+Train: 53.9010238647 Val: 5.37774794283 TrainPerp: 193.338570548 ValPerp: 216.534078783
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i is a to to to to to to to .
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i is a to to to to to to to .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i is a to to to to to to to .
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i is a to to to to to to to .
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i is a to to to to to to to .
+Train: 54.4726867676 Val: 5.3775569536 TrainPerp: 193.284365543 ValPerp: 216.492727056
+Seen 5000 samples
+Saving...
+Done
+Train: 53.753616333 Val: 5.36753241019 TrainPerp: 190.843141432 ValPerp: 214.333327893
+Seen 10000 samples
+[23_12_00] Epoch: 17, Update: 1750, Cost: 54.368724823, UD 1.24808716774
+Train: 54.368724823 Val: 5.36669529743 TrainPerp: 190.807937517 ValPerp: 214.153981807
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i is a to to to to to to to to .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i is a to to to to to to to to .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i is a to to to to to to to to .
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i is a to to to to to to to to .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i is a to to to to to to to to .
+Train: 53.6197280884 Val: 5.3561931675 TrainPerp: 188.245868777 ValPerp: 211.916677658
+Seen 10000 samples
+Train: 54.291759491 Val: 5.35504033049 TrainPerp: 187.933486872 ValPerp: 211.672513037
+Seen 5000 samples
+Saving...
+Done
+Train: 53.4863891602 Val: 5.347986104 TrainPerp: 186.198789646 ValPerp: 210.184581461
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i is a to to to to to to to to to .
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i is a to to to to to to to to to .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i is a to to to to to to to to to .
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i is a to to to to to to to to to .
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i is a to to to to to to to to to .
+Train: 54.1632385254 Val: 5.34997692094 TrainPerp: 186.529290671 ValPerp: 210.603437281
+Seen 5000 samples
+[23_18_48] Epoch: 19, Update: 2000, Cost: 53.3350105286, UD 1.2374548912
+Saving...
+Done
+Train: 53.3350105286 Val: 5.3416585832 TrainPerp: 184.533062787 ValPerp: 208.858832924
+Seen 10000 samples
+Train: 54.0940437317 Val: 5.33805562887 TrainPerp: 183.752470754 ValPerp: 208.107678089
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i is a to to to to to to to to to to to the .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i is a to to to to to to to to to to to the .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i is a to to to to to to to to to to to the .
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i is a to to to to to to to to to to to to .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i is a to to to to to to to to to to to to .
+Train: 53.192741394 Val: 5.3314187639 TrainPerp: 182.142585822 ValPerp: 206.731068768
+Seen 10000 samples
+Train: 53.9023742676 Val: 5.33036762076 TrainPerp: 181.70858105 ValPerp: 206.513878992
+Seen 5000 samples
+Saving...
+Done
+Train: 52.9138565063 Val: 5.3203208317 TrainPerp: 179.389045929 ValPerp: 204.449465341
+Seen 10000 samples
+[23_25_35] Epoch: 22, Update: 2250, Cost: 53.6247406006, UD 1.19492793083
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i is a to to to the the the the the the the the the the the .
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i is a to to to the the the the the the the the the the the .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i is a to to to the the the the the the the the the the the .
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i is a to to to the the the the the the the the the the the .
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i is a to to to the the the the the the the the the the the .
+Train: 53.6247406006 Val: 5.2981669455 TrainPerp: 175.12040889 ValPerp: 199.969918053
+Seen 5000 samples
+Saving...
+Done
+Train: 52.3579368591 Val: 5.29744790966 TrainPerp: 174.320048939 ValPerp: 199.826184195
+Seen 10000 samples
+Train: 53.0619392395 Val: 5.26805001918 TrainPerp: 168.942663193 ValPerp: 194.037224433
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i is is to the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i is is to the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i is is to the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i is is to the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i is is to the the the the the the the the the the the the the the the the the the the the the the the the the the
+Train: 51.9171562195 Val: 5.25957949424 TrainPerp: 166.830283276 ValPerp: 192.400568738
+Seen 10000 samples
+Train: 52.6686172485 Val: 5.23365163974 TrainPerp: 162.205519152 ValPerp: 187.476150454
+Seen 5000 samples
+[23_32_26] Epoch: 24, Update: 2500, Cost: 51.3747062683, UD 1.22939300537
+Saving...
+Done
+Train: 51.3747062683 Val: 5.23337738684 TrainPerp: 161.424747179 ValPerp: 187.424741625
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i is a a the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i is a a the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i is a a the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i is a a the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i is a a the the the the the the the the the the the the the the the the the the the the the the the the the the
+Train: 52.2961654663 Val: 5.20638167883 TrainPerp: 156.856961799 ValPerp: 182.4327622
+Seen 5000 samples
+Saving...
+Done
+Train: 51.0071182251 Val: 5.20837365929 TrainPerp: 156.345307184 ValPerp: 182.796526882
+Seen 10000 samples
+Train: 52.0037727356 Val: 5.18574606689 TrainPerp: 152.754519049 ValPerp: 178.706727239
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i have &apos;t the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i can is the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i can is the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i can is the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i can is the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Train: 50.7240028381 Val: 5.19225738498 TrainPerp: 152.923110886 ValPerp: 179.87414016
+Seen 10000 samples
+[23_39_16] Epoch: 27, Update: 2750, Cost: 51.6719093323, UD 1.19359707832
+Train: 51.6719093323 Val: 5.16762625584 TrainPerp: 148.96975183 ValPerp: 175.497755884
+Seen 5000 samples
+Saving...
+Done
+Train: 50.493637085 Val: 5.17079779105 TrainPerp: 148.326198393 ValPerp: 176.055236765
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i have to the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i have to the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i have to the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i have to the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: i have a the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Train: 51.2547454834 Val: 5.15605688134 TrainPerp: 146.254188902 ValPerp: 173.479056684
+Seen 5000 samples
+Saving...
+Done
+Train: 50.253528595 Val: 5.14622832206 TrainPerp: 143.391214309 ValPerp: 171.782359195
+Seen 10000 samples
+Train: 50.8432121277 Val: 5.13652429317 TrainPerp: 142.299188524 ValPerp: 170.123440335
+Seen 5000 samples
+[23_46_05] Epoch: 29, Update: 3000, Cost: 49.8900566101, UD 1.1947259903
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i have a the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i have a the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i have a the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i have a the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i have a the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Train: 49.8900566101 Val: 5.12013862467 TrainPerp: 138.459227607 ValPerp: 167.358568039
+Seen 10000 samples
+Train: 50.7262687683 Val: 5.10782226297 TrainPerp: 137.433075641 ValPerp: 165.309960972
+Seen 5000 samples
+Saving...
+Done
+Train: 49.6112174988 Val: 5.10045785488 TrainPerp: 134.978321624 ValPerp: 164.097022726
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i have to be to be to be a be the i be the i i i i i i i the the the the the the the the the
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i have &apos;t be to be a be the be the i i i i i i the the the the the the the the the the the the the
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i have to be to be to be a be the i be the i i i i i i i the the the the the the the the the
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i have &apos;t be to be a be a be the i i i i i i i the the the the the the the the the the the the
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he is a the his his his his the the the .
+Train: 50.3814544678 Val: 5.09056601742 TrainPerp: 134.342738513 ValPerp: 162.481803562
+Seen 5000 samples
+Saving...
+Done
+Train: 49.1472053528 Val: 5.13694120039 TrainPerp: 138.059945558 ValPerp: 170.194380812
+Seen 10000 samples
+[23_52_54] Epoch: 32, Update: 3250, Cost: 50.0446395874, UD 1.18989396095
+Train: 50.0446395874 Val: 5.13283381416 TrainPerp: 137.033004763 ValPerp: 169.496760435
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i have a have the the the the the the the the the the the the the the the the the the the the the the the the the the
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i have a i i i i i i i i i i i i i i i i i i i i i i i i i i i
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i have a i i i i i i i i i i i i i i i i i i i i i i i i i i i
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i have a i i i i i i i i i i i i i i i i i i i i i i i i i i i
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i have a i i i i i i i i i i i i i i i i i i i i i i i i i i i
+Train: 48.6842727661 Val: 5.10533862187 TrainPerp: 133.285519144 ValPerp: 164.899899792
+Seen 10000 samples
+Train: 49.813495636 Val: 5.09899359252 TrainPerp: 131.966108959 ValPerp: 163.856917463
+Seen 5000 samples
+Saving...
+Done
+Train: 48.3454551697 Val: 5.07037663785 TrainPerp: 127.793779 ValPerp: 159.234289711
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i have a be to i i i i i i i i i i i i i i i i i i i i i i i i i
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i have a be to be to i i i i i i i i i i i i i i i i i i i i i i i
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i have a be to i i i i i i i i i i i i i i i i i i i i i i i i i
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i have a be to i i i i i i i i i i i i i i i i i i i i i i i i i
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he is a he to he to he a he the his he the the the the the the the the the the the the the the the the the
+Train: 49.6944541931 Val: 5.05957239686 TrainPerp: 126.20587448 ValPerp: 157.52314453
+Seen 5000 samples
+[23_59_44] Epoch: 34, Update: 3500, Cost: 47.9966850281, UD 1.17385697365
+Saving...
+Done
+Train: 47.9966850281 Val: 5.03552465329 TrainPerp: 123.174335774 ValPerp: 153.780252766
+Seen 10000 samples
+Train: 49.2759552002 Val: 4.98152604656 TrainPerp: 117.602999338 ValPerp: 145.696551812
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i have you you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i have a you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i have you you you you you you you you you you you you you you you you ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i have a you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i have you you you you you you you you you you you you you you you you ?
+Train: 48.1441078186 Val: 4.96508297158 TrainPerp: 115.185153099 ValPerp: 143.320441303
+Seen 10000 samples
+Train: 48.820892334 Val: 4.94704591865 TrainPerp: 112.637503753 ValPerp: 140.758536976
+Seen 5000 samples
+Saving...
+Done
+Train: 47.4538879395 Val: 4.97974484615 TrainPerp: 114.455313305 ValPerp: 145.43726804
+Seen 10000 samples
+[00_06_33] Epoch: 37, Update: 3750, Cost: 48.6251449585, UD 1.1949300766
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: i have a be to be a be a be ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i &apos;m a be to be a be the the the the the the the the the the the the the the the the the the the the the the
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: i have a be to be a be a be ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: i have a be to be a be a be ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he is a his his his his his his his his his his his his his his his his his his his his his his his his his his his
+Train: 48.6251449585 Val: 4.96804902772 TrainPerp: 112.82948587 ValPerp: 143.746168833
+Seen 5000 samples
+Saving...
+Done
+Train: 47.2140159607 Val: 4.9605661842 TrainPerp: 111.011375102 ValPerp: 142.674553111
+Seen 10000 samples
+Train: 48.3067092896 Val: 4.94188780743 TrainPerp: 108.734644623 ValPerp: 140.034358091
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i can you have you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i can you have the you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i can you you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i can you have the you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is you you you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Train: 46.8479804993 Val: 4.93217002627 TrainPerp: 107.620591167 ValPerp: 138.680125568
+Seen 10000 samples
+Train: 47.9331245422 Val: 4.91777202905 TrainPerp: 105.351002838 ValPerp: 136.697715122
+Seen 5000 samples
+[00_13_24] Epoch: 39, Update: 4000, Cost: 46.5937995911, UD 1.23423600197
+Saving...
+Done
+Train: 46.5937995911 Val: 4.90030589552 TrainPerp: 103.518042919 ValPerp: 134.330864611
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: what you you have you you have ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i &apos;m a be a you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what is you have you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what is you have you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he is a his his his his his his .
+Train: 47.6331939697 Val: 4.85374913757 TrainPerp: 100.282790841 ValPerp: 128.220205026
+Seen 5000 samples
+Saving...
+Done
+Train: 46.216506958 Val: 4.86524670658 TrainPerp: 99.5100494804 ValPerp: 129.702933232
+Seen 10000 samples
+Train: 47.311504364 Val: 4.85772953967 TrainPerp: 98.0235022822 ValPerp: 128.731590083
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i can you have the the the the ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i can you like to the the the the the the the the ?
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is you have you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i can you like to the the the the the the the the the the the the the the the the the ?
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is you have you you you you you you you you you you you you have ?
+Train: 45.8751029968 Val: 4.84668070947 TrainPerp: 96.5706236844 ValPerp: 127.317085304
+Seen 10000 samples
+[00_20_19] Epoch: 42, Update: 4250, Cost: 46.8854408264, UD 1.24663615227
+Train: 46.8854408264 Val: 4.80213498055 TrainPerp: 94.1695828295 ValPerp: 121.770117025
+Seen 5000 samples
+Saving...
+Done
+Train: 45.499206543 Val: 4.81701433681 TrainPerp: 93.1057279154 ValPerp: 123.595524745
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: do you have you have you you have ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: what &apos;s the be you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what is you you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what is you you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he is a his his his his his his his his his his the the the the the the the the the the the the the the the the the
+Train: 46.3989830017 Val: 4.79650497089 TrainPerp: 90.9876857835 ValPerp: 121.086476348
+Seen 5000 samples
+Saving...
+Done
+Train: 45.1680641174 Val: 4.7859181639 TrainPerp: 90.0194612115 ValPerp: 119.811319025
+Seen 10000 samples
+Train: 46.2195396423 Val: 4.75169059246 TrainPerp: 87.4256720013 ValPerp: 115.779855716
+Seen 5000 samples
+[00_27_09] Epoch: 44, Update: 4500, Cost: 45.1016807556, UD 1.17267990112
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: how you have you you have a you ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i have a you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is you have you have you do you have you have you do ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i have a you you you you you you you you you you you you you you you you you you you you you you you you you you you
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is you have you have you do you have you have you do ?
+Train: 45.1016807556 Val: 4.74462003062 TrainPerp: 86.4391653549 ValPerp: 114.96411436
+Seen 10000 samples
+Train: 45.7993392944 Val: 4.74749989487 TrainPerp: 84.9468081091 ValPerp: 115.295672595
+Seen 5000 samples
+Saving...
+Done
+Train: 44.7258300781 Val: 4.75322025429 TrainPerp: 85.8928001419 ValPerp: 115.957095265
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: do you have you do you do you do ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: what &apos;s you have a you you ?
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: do you have you you you you ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: do you have you you you you ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he is a his his his his his his his his his .
+Train: 45.4831352234 Val: 4.71609670238 TrainPerp: 82.8987693064 ValPerp: 111.731279966
+Seen 5000 samples
+Saving...
+Done
+Train: 44.5122070312 Val: 4.69231506402 TrainPerp: 80.6790692603 ValPerp: 109.105473814
+Seen 10000 samples
+[00_33_56] Epoch: 47, Update: 4750, Cost: 45.1011123657, UD 1.18304896355
+Train: 45.1011123657 Val: 4.6813379294 TrainPerp: 79.5684231319 ValPerp: 107.91435782
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: how you have a you you have a .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i have a you you you like a .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is you have you have a do you have a ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i &apos;m a you you like a .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is you have you have a do you have a ?
+Train: 44.3462028503 Val: 4.67437962031 TrainPerp: 78.2673476631 ValPerp: 107.166062817
+Seen 10000 samples
+Train: 44.8422889709 Val: 4.68325323346 TrainPerp: 77.3172755732 ValPerp: 108.12124469
+Seen 5000 samples
+Saving...
+Done
+Train: 43.7232627869 Val: 4.67962828935 TrainPerp: 76.7852484215 ValPerp: 107.730020731
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: what &apos;s a book , i have a book ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i &apos;m a the man , i will be a .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what &apos;s a book , i have a book ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what &apos;s a book , i have a book ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he is not to be to be to his his .
+Train: 44.8027915955 Val: 4.64725388388 TrainPerp: 75.3581347873 ValPerp: 104.298177047
+Seen 5000 samples
+[00_40_51] Epoch: 49, Update: 5000, Cost: 43.6398468018, UD 1.17620992661
+Saving...
+Done
+Train: 43.6398468018 Val: 4.62771111248 TrainPerp: 73.0811372683 ValPerp: 102.27968928
+Seen 10000 samples
+Train: 44.3356361389 Val: 4.62270492332 TrainPerp: 72.1652079169 ValPerp: 101.768937335
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i &apos;m a book to the book in the room ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i &apos;m a book to the book in the room .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: i have the book to the book to the way of the station ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i &apos;m a book of the way of the room .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: i have the book to the book to the way of the station ?
+Train: 43.1867294312 Val: 4.63894715185 TrainPerp: 72.103538874 ValPerp: 103.435388477
+Seen 10000 samples
+Train: 44.0807342529 Val: 4.6166545473 TrainPerp: 70.2835107106 ValPerp: 101.155055976
+Seen 5000 samples
+Saving...
+Done
+Train: 42.7751846313 Val: 4.59957604752 TrainPerp: 68.6040726379 ValPerp: 99.442147959
+Seen 10000 samples
+[00_47_40] Epoch: 52, Update: 5250, Cost: 43.8294448853, UD 1.23710513115
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: what &apos;s help to the book , you will be a book ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i &apos;m a book of the book is to the room ?
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what &apos;s help to the book , you will be a way of the station ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what &apos;s help to the book , you will be a way of the station ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was not to be to be to the the man to the the life .
+Train: 43.8294448853 Val: 4.60347101849 TrainPerp: 68.6223836813 ValPerp: 99.8302275267
+Seen 5000 samples
+Saving...
+Done
+Train: 42.5700378418 Val: 4.59060963919 TrainPerp: 67.7154785394 ValPerp: 98.554494533
+Seen 10000 samples
+Train: 43.5054969788 Val: 4.55621026039 TrainPerp: 65.7853733675 ValPerp: 95.2219288553
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i &apos;m a book to the book in the way ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i &apos;m a book to the book in the .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: how you have a book to the way time you have a way ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i &apos;m a book to the book in the .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: how you have a book to the way time you have a way ?
+Train: 42.1802444458 Val: 4.55861970104 TrainPerp: 64.6201076408 ValPerp: 95.451637064
+Seen 10000 samples
+Train: 43.118183136 Val: 4.54446525755 TrainPerp: 64.036732901 ValPerp: 94.1100890918
+Seen 5000 samples
+[00_54_31] Epoch: 54, Update: 5500, Cost: 41.8641319275, UD 1.18610811234
+Saving...
+Done
+Train: 41.8641319275 Val: 4.5416702943 TrainPerp: 62.8846723182 ValPerp: 93.8474220953
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: what is a book to the book , you will you have a mind ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i have a book to the book is a good .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what &apos;s help , you will be a book to the station ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what &apos;s help , you will be a book to the station ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a the man to the the man to the man to the way to the way to the way .
+Train: 43.0471038818 Val: 4.54201295018 TrainPerp: 62.6497921595 ValPerp: 93.8795849759
+Seen 5000 samples
+Saving...
+Done
+Train: 41.7192382812 Val: 4.51808527134 TrainPerp: 60.9287090325 ValPerp: 91.6599259626
+Seen 10000 samples
+Train: 42.7334022522 Val: 4.51783945715 TrainPerp: 60.5132289051 ValPerp: 91.637397421
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i have take the book in your way in the station ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i have a book to the book in the book ?
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: how is the book in your way in the way ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i &apos;m a best time that he is a good time in the room .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: how you have the book to the book of your way ?
+Train: 41.3450164795 Val: 4.52092909173 TrainPerp: 59.8313363063 ValPerp: 91.920961322
+Seen 10000 samples
+[01_01_18] Epoch: 57, Update: 5750, Cost: 42.4060173035, UD 1.21262383461
+Train: 42.4060173035 Val: 4.4936304568 TrainPerp: 59.0742291183 ValPerp: 89.4455854688
+Seen 5000 samples
+Saving...
+Done
+Train: 41.2220191956 Val: 4.49987410194 TrainPerp: 58.0713519628 ValPerp: 90.0057990321
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: what are you have a good ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i have a book to the book , you will be a good ?
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what are you have to do ? &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot;
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what are you a book to the book ? &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot;
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a new new new mother to be a new way .
+Train: 42.1591796875 Val: 4.46867496034 TrainPerp: 56.5904421998 ValPerp: 87.2410485446
+Seen 5000 samples
+Saving...
+Done
+Train: 40.8361053467 Val: 4.48319492927 TrainPerp: 56.1786776339 ValPerp: 88.517027025
+Seen 10000 samples
+Train: 42.1328620911 Val: 4.47895794482 TrainPerp: 55.6826957302 ValPerp: 88.1427751678
+Seen 5000 samples
+[01_08_11] Epoch: 59, Update: 6000, Cost: 40.5941619873, UD 1.17466592789
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i &apos;m a good time you have a good ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i &apos;m a best time that i can get a good time .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: how is the book in the way you have a good ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: i am a good man of his way in the room .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: how is the book in the way you have a good ?
+Train: 40.5941619873 Val: 4.46641338623 TrainPerp: 54.4554627102 ValPerp: 87.0439693863
+Seen 10000 samples
+Train: 41.802734375 Val: 4.44430224126 TrainPerp: 53.4065885323 ValPerp: 85.1404496135
+Seen 5000 samples
+Saving...
+Done
+Train: 40.2711219788 Val: 4.45685351537 TrainPerp: 53.1713074208 ValPerp: 86.2158051587
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: what is the book , please ? &quot; &quot; is ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i &apos;m a good person , you will be a good ?
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what are you to be to be to be ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what are you to be a good ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a new mother , he was a new way to the way .
+Train: 41.3454704285 Val: 4.42431711945 TrainPerp: 51.4912812628 ValPerp: 83.4557974182
+Seen 5000 samples
+Saving...
+Done
+Train: 40.0303039551 Val: 4.43513993437 TrainPerp: 51.323155015 ValPerp: 84.363929476
+Seen 10000 samples
+[01_15_01] Epoch: 62, Update: 6250, Cost: 41.2552528381, UD 1.1871008873
+Train: 41.2552528381 Val: 4.44436609963 TrainPerp: 51.3734229844 ValPerp: 85.1458867176
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: i &apos;m a good time that she is a good ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: i &apos;m a good time of the book , please &apos;t you .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the book in the book in the station ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: of she is a good man in the room .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the book in the book in the station ?
+Train: 39.8262519836 Val: 4.43622693829 TrainPerp: 50.3253250702 ValPerp: 84.4556832567
+Seen 10000 samples
+Train: 40.8054656982 Val: 4.40497107925 TrainPerp: 48.9235736779 ValPerp: 81.8567754495
+Seen 5000 samples
+Saving...
+Done
+Train: 39.6285705566 Val: 4.42407759118 TrainPerp: 48.8568938656 ValPerp: 83.4358097891
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: what &apos;s the book is a good ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: i &apos;m a good person that he will be a good @-@ other @-@ year , please &apos;t you ?
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what are not to be to be to be to be to be to be ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: what are not to be to be to be to be to be to be ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a new school , he was a new school , he was a new way to the way to the way .
+Train: 40.6673583984 Val: 4.4240864665 TrainPerp: 48.9384814105 ValPerp: 83.4365503116
+Seen 5000 samples
+[01_21_51] Epoch: 64, Update: 6500, Cost: 39.3986206055, UD 1.17877006531
+Saving...
+Done
+Train: 39.3986206055 Val: 4.41699740469 TrainPerp: 48.0193191781 ValPerp: 82.8471550474
+Seen 10000 samples
+Train: 40.2053985596 Val: 4.39043555686 TrainPerp: 46.6469716682 ValPerp: 80.6755501183
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: can you like the book in the room ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: please that she will be a good way in the room .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the book in the book in the station ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: of she is a good man in the room .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the book in the book in the station in the station ?
+Train: 38.9699516296 Val: 4.40786712735 TrainPerp: 46.4226640448 ValPerp: 82.0941802103
+Seen 10000 samples
+Train: 40.1230697632 Val: 4.40059610935 TrainPerp: 46.3423214622 ValPerp: 81.4994367635
+Seen 5000 samples
+Saving...
+Done
+Train: 38.6947975159 Val: 4.40229138652 TrainPerp: 45.5143443921 ValPerp: 81.6377180782
+Seen 10000 samples
+[01_28_44] Epoch: 67, Update: 6750, Cost: 39.731880188, UD 1.19178986549
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: is the book , and you have a good ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: what he has no good , but he is a good , but he is a good .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what are not to be to be to be to be a good ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: please will be a good of the book , and you have a good ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a new school , and he was a new mother to be a new way to the way .
+Train: 39.731880188 Val: 4.39747537734 TrainPerp: 45.3951817476 ValPerp: 81.2454953107
+Seen 5000 samples
+Saving...
+Done
+Train: 38.5642089844 Val: 4.39008588869 TrainPerp: 44.2236907294 ValPerp: 80.6473453775
+Seen 10000 samples
+Train: 39.5917205811 Val: 4.37157102172 TrainPerp: 43.5481251583 ValPerp: 79.1679085573
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: can you like the book in the room ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: is the best of the book , please &apos;t you .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the book in the book in the station in the station ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: is the man is a man to the book on her house .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the book in the book in the station in the station ?
+Train: 38.3883094788 Val: 4.37991384048 TrainPerp: 43.3912052913 ValPerp: 79.8311548948
+Seen 10000 samples
+Train: 39.1511459351 Val: 4.366218879 TrainPerp: 42.4536283033 ValPerp: 78.745322491
+Seen 5000 samples
+[01_35_40] Epoch: 69, Update: 7000, Cost: 38.1803817749, UD 1.19297099113
+Saving...
+Done
+Train: 38.1803817749 Val: 4.36758376682 TrainPerp: 42.1004287429 ValPerp: 78.8528744037
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: is the book , and i have a good ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: what he will be a good , but he will be a good , but he is a good @-@ year he will be a good @-@ year he will
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: what &apos;s the book , and i have a good ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: can you like to be a good ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a new school , and he was a new mother to be a new mother .
+Train: 38.8951950073 Val: 4.37600594564 TrainPerp: 42.1429095509 ValPerp: 79.5197919197
+Seen 5000 samples
+Saving...
+Done
+Train: 37.909942627 Val: 4.37676686578 TrainPerp: 41.4055420523 ValPerp: 79.5803231577
+Seen 10000 samples
+Train: 38.5976600647 Val: 4.35266215885 TrainPerp: 40.4760783555 ValPerp: 77.6849976935
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: can you like her way in the room .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: is the best of the best of the best , but i have a good time in the room .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the best man is the best person is the best ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: is the man that she is a man to the best of the way in the room .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the book in the book in the station ?
+Train: 37.6356887817 Val: 4.36670797881 TrainPerp: 40.3625590126 ValPerp: 78.7838462334
+Seen 10000 samples
+[01_42_26] Epoch: 72, Update: 7250, Cost: 38.4283905029, UD 1.19203209877
+Train: 38.4283905029 Val: 4.34807809707 TrainPerp: 39.6509979927 ValPerp: 77.32969984
+Seen 5000 samples
+Saving...
+Done
+Train: 37.4752578735 Val: 4.35448234047 TrainPerp: 39.5315034576 ValPerp: 77.8265272641
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: is the book , and is the book , please will you have a good ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: who &apos;s be a good person that he will be a good , but he is a good of the station .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: is the book , and i have a good ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: can you like a good way to the book , and you have a good ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a new mother , and as to be a new mother to the station .
+Train: 38.2117156982 Val: 4.37088539769 TrainPerp: 39.4107412411 ValPerp: 79.1136477398
+Seen 5000 samples
+Saving...
+Done
+Train: 37.1826972961 Val: 4.36721084534 TrainPerp: 38.8400555148 ValPerp: 78.8234739558
+Seen 10000 samples
+Train: 37.8221817017 Val: 4.34583485255 TrainPerp: 37.8935634043 ValPerp: 77.1564248365
+Seen 5000 samples
+[01_49_16] Epoch: 74, Update: 7500, Cost: 37.0049705505, UD 1.16782307625
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: who is a man to do the best of her house .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: is the best of the best , but i can &apos;t it .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the best man is a good ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: is the man to the man is a good house .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the best person is the best person is in the station ?
+Train: 37.0049705505 Val: 4.34696716961 TrainPerp: 37.5942555722 ValPerp: 77.2438398539
+Seen 10000 samples
+Train: 37.545955658 Val: 4.35399080005 TrainPerp: 37.2468714838 ValPerp: 77.7882817803
+Seen 5000 samples
+Saving...
+Done
+Train: 36.7497291565 Val: 4.33871777969 TrainPerp: 36.8746817363 ValPerp: 76.6092464031
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: is the book in the book , please ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: who &apos;s not a good person , but he is a good friends .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: is the book in the book , please ? &quot; will you have a good ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: is the book in the book , and you have a good ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a man to be a new mother to be a new way for the way .
+Train: 37.2940864563 Val: 4.34708717775 TrainPerp: 36.4477632516 ValPerp: 77.2531102998
+Seen 5000 samples
+Saving...
+Done
+Train: 36.4590377808 Val: 4.35825955999 TrainPerp: 36.2728034136 ValPerp: 78.1210510318
+Seen 10000 samples
+[01_56_05] Epoch: 77, Update: 7750, Cost: 37.1379890442, UD 1.19203019142
+Train: 37.1379890442 Val: 4.32278876416 TrainPerp: 35.1455365541 ValPerp: 75.3986042947
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: is the man to do the way to the way in his house ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: can you like a good way in the room , but i can &apos;t it in the room .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the best man in the room ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: is the man to the man of his own .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the best person and a good ?
+Train: 36.2275848389 Val: 4.3366479086 TrainPerp: 35.2899104846 ValPerp: 76.4508391371
+Seen 10000 samples
+Train: 37.0474472046 Val: 4.35629669149 TrainPerp: 35.1595614938 ValPerp: 77.9678600778
+Seen 5000 samples
+Saving...
+Done
+Train: 35.9862174988 Val: 4.33748532794 TrainPerp: 34.3652238718 ValPerp: 76.514887362
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: is the book in the book , and is a good person , and your way in the station ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: is her person that he is a man to be a good friends .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: is the book in the book , and you have to have a good ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: is the book in the book , and you have a good person , and your way in the station ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a good to be a new mother for a new school .
+Train: 36.5578308105 Val: 4.34714572315 TrainPerp: 34.1229759042 ValPerp: 77.2576332467
+Seen 5000 samples
+[02_02_56] Epoch: 79, Update: 8000, Cost: 35.6887550354, UD 1.23090600967
+Saving...
+Done
+Train: 35.6887550354 Val: 4.3546351352 TrainPerp: 33.9188608382 ValPerp: 77.8384196556
+Seen 10000 samples
+Train: 36.4428253174 Val: 4.32550486161 TrainPerp: 32.983180946 ValPerp: 75.6036726184
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: is the man to do the way to the way you have to do it .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: is a good person that are not not not to do it in a day , she is a good house .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the best man is a good house in the room is in the room ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: of his house is not to do it in his house .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the best person is in the room ?
+Train: 35.4815101624 Val: 4.334044615 TrainPerp: 32.787902386 ValPerp: 76.2520739913
+Seen 10000 samples
+Train: 36.1300544739 Val: 4.34805993186 TrainPerp: 32.6851604686 ValPerp: 77.328295143
+Seen 5000 samples
+Saving...
+Done
+Train: 35.2426834106 Val: 4.34598628829 TrainPerp: 32.3892179091 ValPerp: 77.1681099614
+Seen 10000 samples
+[02_09_44] Epoch: 82, Update: 8250, Cost: 35.9505729675, UD 1.18579316139
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: is the book , and is a good right from a week ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: is his good , she is a good , but he is a good friends .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: is the book , and is the way for me to the station ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: is the book in the book , and you have to have a good ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a good to be a new parents for a new school .
+Train: 35.9505729675 Val: 4.32259762862 TrainPerp: 31.4063718414 ValPerp: 75.3841943188
+Seen 5000 samples
+Saving...
+Done
+Train: 34.8985481262 Val: 4.33407523382 TrainPerp: 31.4825969342 ValPerp: 76.2544087754
+Seen 10000 samples
+Train: 35.9680519104 Val: 4.35647213668 TrainPerp: 31.6522121088 ValPerp: 77.9815403642
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: is her person to do the way that she will not not to do it in the station ?
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: is me to have a good way in the room , we can &apos;t it in the room .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the best person is a good person is in a good person ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: of his house , she is a man to do the best of his house .
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: is the best person for the room ?
+Train: 34.7125968933 Val: 4.32866847596 TrainPerp: 30.6303113745 ValPerp: 75.8432322191
+Seen 10000 samples
+Train: 35.4629364014 Val: 4.32002433872 TrainPerp: 30.0351850172 ValPerp: 75.1904583095
+Seen 5000 samples
+[02_16_42] Epoch: 84, Update: 8500, Cost: 34.5777702332, UD 1.23104500771
+Saving...
+Done
+Train: 34.5777702332 Val: 4.35263708808 TrainPerp: 30.2930007822 ValPerp: 77.6830500951
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: is the book , and is a good person , and is the way that you are to the station ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: is his best , she is a man he is to do it to her house .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: who &apos;s a good right of this will be a good ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: is the book in the book , but i don &apos;t know him in the station ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he was a man as to be a new parents to the station .
+Train: 35.1914367676 Val: 4.35900939281 TrainPerp: 30.1034594164 ValPerp: 78.179650727
+Seen 5000 samples
+Saving...
+Done
+Train: 34.2832717896 Val: 4.33878429534 TrainPerp: 29.6737631028 ValPerp: 76.6143422864
+Seen 10000 samples
+Train: 34.9349327087 Val: 4.3279037084 TrainPerp: 28.9717329473 ValPerp: 75.7852519488
+Seen 5000 samples
+Saving...
+Done
+Source 0:  彼 ら は この 事 を 何 も 知 ら な い か も しれ な い 。
+Truth 0: they may not know anything about this .
+Sample 0: is the man &apos;s good person to the way her .
+Source 1:  それ は 今 私 たち が 話し合 っ て い る 問題 と は 何 の 関係 も な い 。
+Truth 1: it has nothing to do with the subject we are discussing .
+Sample 1: of the best man is not to do the best of the best @-@ year is not to be a good house .
+Source 2:  学校 は 月曜 日 に 始ま り ま す 。
+Truth 2: school will open on monday .
+Sample 2: is the best person is a good house in the room is in a good voice ?
+Source 3:  家 の 者 は すでに 朝 の ６ 時 に は 起き て い た 。
+Truth 3: the household was already awake at 6 in the morning .
+Sample 3: of his house are not to do the way with her house ?
+Source 4:  放課 後 に テニス を し ま しょ う 。
+Truth 4: let &apos;s play tennis after school .
+Sample 4: who is the best person for the room ?
+Train: 34.0733261108 Val: 4.3441821587 TrainPerp: 28.9940136737 ValPerp: 77.0290142021
+Seen 10000 samples
+[02_23_34] Epoch: 87, Update: 8750, Cost: 34.5899810791, UD 1.1857688427
+Train: 34.5899810791 Val: 4.33454346479 TrainPerp: 27.9656629308 ValPerp: 76.2901218112
+Seen 5000 samples
+Saving...
+Done
+Train: 33.7797241211 Val: 4.33290174403 TrainPerp: 27.8811445176 ValPerp: 76.1649774888
+Seen 10000 samples
+Source 0:  出発 する 前 に 必ず 火 を 消 し なさ い 。
+Truth 0: be sure to put out the fire before you leave .
+Sample 0: of your , and is a good person , what is a good person , but i have to have a good ?
+Source 1:  彼 を 見 る と 、 笑 わ な い で は い られ な い だ ろ う 。
+Truth 1: to look at him , you couldn &apos;t help laughing .
+Sample 1: he is not , but not , but do he comes to her brother .
+Source 2:  今日 母 を 買い物 に 引っ張 っ て 行 き ま し た 。
+Truth 2: today i got my mother out for shopping .
+Sample 2: of the way , you should not have a good right of the way , what is a good ?
+Source 3:  君 は 空 を 飛 ぶ 夢 を 見 る 事 が あ り ま す か 。
+Truth 3: do you ever dream about flying through the sky ?
+Sample 3: is the book , and is a good person that i have to have a good of the station ?
+Source 4:  彼 は き た な い 通り に あ る 高 い 塀 の 中 の 古 い 学校 に つ い て 話 し て くれ ま し た 。
+Truth 4: he told me about an old school behind a high wall in a dirty street .
+Sample 4: he had a lot of money to be a new parents for the river .
+Train: 34.6965179443 Val: 4.36439594233 TrainPerp: 28.3682437595 ValPerp: 78.6019055145
+Seen 5000 samples
