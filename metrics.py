@@ -16,7 +16,9 @@ import dateutil
 import dateutil.tz
 import datetime
 
-#from nltk.translate.bleu_score import corpus_bleu
+from data_iterator import prepare_data
+
+from nltk.translate.bleu_score import corpus_bleu
 # https://github.com/ddahlmeier/neural_lm/blob/master/lbl.py
 
 def pred_perplexity(f_log_probs, prepare_data, options, iterator, verbose=False):
@@ -46,25 +48,31 @@ def pred_perplexity(f_log_probs, prepare_data, options, iterator, verbose=False)
 def perplexity_from_logprobs(minus_log_probs):
     return np.exp(np.mean(minus_log_probs))
 
+def compute_BLEU(iterator, options, tparams, f_init, 
+                 f_next, generator, trng, stochastic=False):
 
-def compute_BLEU(iterator, options, tparams, f_init, f_next, trng, stochastic=False):
-    bleu_scores = []
+    hypothesis = []
+    originals = []
     for x, y in iterator:
         x, x_mask, y, y_mask = prepare_data(x, y, maxlen=100,
                                             n_words_src=options['n_words_src'],
                                             n_words=options['n_words'])
 
-
         for utterance_idx in xrange(x.shape[1]):
-            hypothesis, score = gen_sample(tparams, f_init, f_next, x[:, utterance_idx][:, None],
-                                       model_options, trng=trng, k=1, maxlen=30,
-                                       stochastic=stochastic, argmax=True)
+            h, score = generator(tparams, f_init, f_next, x[:, utterance_idx][:, None],
+                                  options, trng=trng, k=1, maxlen=30,
+                                  stochastic=stochastic, argmax=True)
 
-            original = y[:, utterance_idx]
-            hypothesis = ' '.join([str(i) for i in sample])
-            original = ' '.join([str(i) for i in original])
+            original = y[:, utterance_idx][:, None] 
+            original = [i[0] for i in original if i[0]!=0]
+            original = [str(i) for i in original]                       
 
-            bleu_scores.append(bleu(original, hypothesis))
+            h = h[0]
+            h = [str(i) for i in h]
+            
+            hypothesis.append(h)
+            originals.append(original)
 
-    bleu_scores = np.array(bleu_scores)
-    return bleu_scores.mean()
+    print originals[0]
+    print hypothesis[0]
+    return corpus_bleu(originals, hypothesis)

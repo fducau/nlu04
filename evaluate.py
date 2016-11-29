@@ -2,7 +2,7 @@
 # @Author: fducau
 # @Date:   2016-11-23 13:50:50
 # @Last Modified by:   fducau
-# @Last Modified time: 2016-11-27 19:38:17
+# @Last Modified time: 2016-11-29 03:16:04
 import theano
 import theano.tensor as tensor
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
@@ -19,11 +19,6 @@ import time
 from scipy import optimize, stats
 from collections import OrderedDict
 
-import wmt14enfr
-import iwslt14zhen
-import openmt15zhen
-import trans_enhi
-import stan
 import data_iterator
 
 import dateutil
@@ -31,6 +26,7 @@ import dateutil.tz
 import datetime
 
 from nmt import *
+from metrics import *
 
 def load_lines(input_file):
     x = []
@@ -70,9 +66,8 @@ def evaluate(dim_word=128,
              use_dropout=False,
              correlation_coeff=0.1,
              clip_c=1.,
-             input_file='./chat_files/input_sentences.txt_idx'):
+             model='./att001_turn_0'):
     
-    source_utterances = load_lines(input_file)
     # Model options
     model_options = locals().copy()
 
@@ -117,37 +112,19 @@ def evaluate(dim_word=128,
     # reload history
     if model and os.path.exists(model):
         history_errs = list(numpy.load(model)['history_errs'])
-    best_p = None
-    bad_count = 0
 
+    print 'Loading data...'
+    load_data, prepare_data = get_dataset(dataset)
 
+    train, valid, test = load_data(train_batch_size=batch_size,
+                                   val_batch_size=valid_batch_size,
+                                   test_batch_size=valid_batch_size)
 
-    uidx = 0
-    estop = False
-    save_turn = 0
-    ####################
-    # Main training loop
-    ####################
+    bleu = compute_BLEU(test, model_options, tparams, f_init, f_next, gen_sample, trng)
+    print('TEST BLEU score: {}').format(bleu)
 
-
-    for i, x in enumerate(source_utterances):
-        stochastic = False
-        sample, score = gen_sample(tparams, f_init, f_next, x[:, None],
-                                   model_options, trng=trng, k=1, maxlen=30,
-                                   stochastic=stochastic, argmax=True)
-
-        print('Source {}: '.format(i) + print_utterance(x, word_idict))
-        if stochastic:
-            ss = sample
-        else:
-            score = score / numpy.array([len(s) for s in sample])
-            ss = sample[score.argmin()]
-        print('Sample {}:'.format(i) + print_utterance(ss, word_idict))
-
-
-
-
+    plot_perplexity(model_options['history_errs'])
 
 if __name__ == '__main__':
-    evaluate(model='./chat_files/ckt_noatt_001_MED1_turn_0')
+    evaluate(model='./noatt001_turn_1')
 
