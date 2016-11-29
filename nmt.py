@@ -1783,7 +1783,7 @@ def train(dim_word=256,  # word vector dimensionality
                                        val_batch_size=valid_batch_size,
                                        test_batch_size=valid_batch_size)
         
-        train_perp, valid_perp, test_perp = load_data(train_batch_size=batch_size,
+        train_p, valid_p, test_p = load_data(train_batch_size=batch_size,
                                        val_batch_size=valid_batch_size,
                                        test_batch_size=valid_batch_size)
     print 'Building model...'
@@ -1962,11 +1962,11 @@ def train(dim_word=256,  # word vector dimensionality
                 test_err = 0
 
                 if valid is not None:
-                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, valid_perp)
+                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, valid_p)
                     valid_err = numpy.mean(log_probs)
                     valid_perp = numpy.exp(valid_err)
 
-                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, train_perp)
+                    log_probs = pred_probs(f_log_probs, prepare_data, model_options, train_p)
                     train_err = numpy.mean(log_probs)
                     train_perp = numpy.exp(train_err)  
 
@@ -1997,9 +1997,9 @@ def train(dim_word=256,  # word vector dimensionality
     test_err = 0
     # train_err = pred_error(f_pred, prepare_data, train, kf)
     if valid is not None:
-        valid_err = pred_probs(f_log_probs, prepare_data, model_options, valid).mean()
+        valid_err = pred_probs(f_log_probs, prepare_data, model_options, valid_p).mean()
     if test is not None:
-        test_err = pred_probs(f_log_probs, prepare_data, model_options, test).mean()
+        test_err = pred_probs(f_log_probs, prepare_data, model_options, test_p).mean()
 
     print('Train: {}, Valid: {}, Test: {}'.format(train_err, valid_err, test_err))
 
